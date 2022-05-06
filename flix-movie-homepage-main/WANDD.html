@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css">
+
+    <!-- GOOGLE FONTS -->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@200;300;400;600;700;900&display=swap" rel="stylesheet">
+    <!-- OWL CAROUSEL -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css" integrity="sha512-tS3S5qG0BlhnQROyJXvNjeEM4UpMXHrQfTGmbQ1gKmelCxlSEBUaxhRBj/EFTzpbP4RVSrpEikbmdJobCvhE3g==" crossorigin="anonymous" />
+    <!-- BOX ICONS -->
+    <link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="shortcut icon" href="./favicon.svg" type="image/svg+xml">
+
+  <!-- 
+    - custom css link
+  -->
+  <link rel="stylesheet" href="./assets/css/style.css">
+
+  <!-- 
+    - google font link
+  -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="WandD.css">
+</head>
+<body>
+     <!-- NAV -->
+     <div class="nav-wrapper">
+        <div class="container">
+            <div class="nav">
+                <a href="#" class="logo">
+                    <i class='bx bx-movie-play bx-tada main-color'></i>cinema <span class="main-color">  city</span>
+                </a>
+                <ul class="nav-menu" id="nav-menu">
+                    <li><a href="#">الرئسية</a></li>
+                    <li><a href="#">الأفلام</a></li>
+                    <li><a href="#">المسلسلات</a></li>
+                    <li><a href="#">About</a></li>
+                    <li>
+                        <a href="#" class="btn btn-hover">
+                            <span>انضم للموقع</span>
+                        </a>
+                    </li>
+                </ul>
+                <!-- MOBILE MENU TOGGLE -->
+                <div class="hamburger-menu" id="hamburger-menu">
+                    <div class="hamburger"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--   END NAV -->
+
+    <section class="movie-detail">
+        <div class="container">
+
+          <figure class="movie-detail-banner">
+
+            <img src="https://m.media-amazon.com/images/M/MV5BNTA3YWRjODItZWIxYy00ZGE3LTg0Y2QtNWFlNDlmOTg2MGEyXkEyXkFqcGdeQXVyMTkxNjUyNQ@@._V1_.jpg" alt="Free guy movie poster">
+
+            <button class="play-btn">
+              <ion-icon name="play-circle-outline" role="img" class="md hydrated" aria-label="play circle outline"></ion-icon>
+            </button>
+
+          </figure>
+
+          <div class="movie-detail-content">
+
+            <p class="detail-subtitle">New Episodes</p>
+
+            <h1 class="h1 detail-title">
+              Free <strong>Guy</strong>
+            </h1>
+
+            <div class="meta-wrapper">
+
+              <div class="badge-wrapper">
+                <div class="badge badge-fill">PG 13</div>
+
+                <div class="badge badge-outline">HD</div>
+              </div>
+
+              <div class="ganre-wrapper">
+                <a href="#">Comedy,</a>
+
+                <a href="#">Action,</a>
+
+                <a href="#">Adventure,</a>
+
+                <a href="#">Science Fiction</a>
+              </div>
+
+              <div class="date-time">
+
+                <div>
+                  <ion-icon name="calendar-outline" role="img" class="md hydrated" aria-label="calendar outline"></ion-icon>
+
+                  <time datetime="2021">2021</time>
+                </div>
+
+                <div>
+                  <ion-icon name="time-outline" role="img" class="md hydrated" aria-label="time outline"></ion-icon>
+
+                  <time datetime="PT115M">115 min</time>
+                </div>
+
+              </div>
+
+            </div>
+
+            <p class="storyline">
+              A bank teller called Guy realizes he is a background character in an open world video game called Free
+              City that will
+              soon go offline.
+            </p>
+
+            <div class="details-actions">
+
+              <button class="share">
+                <i class="bi bi-share-fill"></i>
+                <span>Share</span>
+              </button>
+
+              <div class="title-wrapper">
+                <p class="title">Prime Video</p>
+
+                <p class="text">Streaming Channels</p>
+              </div>
+
+              <button class="btn btn-primary">
+                <ion-icon name="play" role="img" class="md hydrated" aria-label="play"></ion-icon>
+
+                <span>مشاهدة الان</span>
+                
+              </button>
+
+            </div>
+
+            <a href="./assets/images/movie-4.png" download="" class="download-btn">
+              <span>تحميل</span>
+
+              <i  id="bi bi-arrow-down-square1" class="bi bi-arrow-down-square"></i>
+            </a>
+
+            
+          </div>
+
+        </div>
+      </section>
+
+      <script>
+
+'use strict';
+
+/**
+ * navbar variables
+ */
+
+ $(document).ready(() => {
+    $('#hamburger-menu').click(() => {
+        $('#hamburger-menu').toggleClass('active')
+        $('#nav-menu').toggleClass('active')
+    })
+
+    // setting owl carousel
+
+    let navText = ["<i class='bx bx-chevron-left'></i>", "<i class='bx bx-chevron-right'></i>"]
+
+    $('#hero-carousel').owlCarousel({
+        items: 1,
+        dots: false,
+        loop: true,
+        nav:true,
+        navText: navText,
+        autoplay: true,
+        autoplayHoverPause: true
+    })
+
+    $('#top-movies-slide').owlCarousel({
+        items: 2,
+        dots: false,
+        loop: true,
+        autoplay: true,
+        autoplayHoverPause: true,
+        responsive: {
+            500: {
+                items: 3
+            },
+            1280: {
+                items: 4
+            },
+            1600: {
+                items: 6
+            }
+        }
+    })
+
+    $('.movies-slide').owlCarousel({
+        items: 2,
+        dots: false,
+        nav:true,
+        navText: navText,
+        margin: 15,
+        responsive: {
+            500: {
+                items: 2
+            },
+            1280: {
+                items: 4
+            },
+            1600: {
+                items: 6
+            }
+        }
+    })
+})
+      </script>
+</body>
+</html>
